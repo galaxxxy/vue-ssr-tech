@@ -30,7 +30,7 @@ const config = {
         loader: 'babel-loader',
       },
       {
-        test: /\.styl$/,
+        test: /\.styl/,
         use: [
           'style-loader',
           'css-loader',
