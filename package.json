@@ -1,0 +1,36 @@
+{
+  "name": "vue-ssr-tech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galaxxxy/vue-ssr-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galaxxxy/vue-ssr-tech/issues"
+  },
+  "homepage": "https://github.com/galaxxxy/vue-ssr-tech#readme",
+  "dependencies": {
+    "css-loader": "^3.4.2",
+    "file-loader": "^6.0.0",
+    "style-loader": "^1.1.3",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "url-loader": "^4.0.0",
+    "vue": "^2.6.11",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.11"
+  }
+}
