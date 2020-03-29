@@ -26,10 +26,20 @@ const config = {
         ],
       },
       {
+        test: /\.jsx$/,
+        loader: 'babel-loader',
+      },
+      {
         test: /\.styl$/,
         use: [
           'style-loader',
           'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
           'stylus-loader',
         ],
       },
