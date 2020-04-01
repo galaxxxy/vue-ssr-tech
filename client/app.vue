@@ -1,28 +1,28 @@
 <template>
   <div id="app">
-    <div id="cover"></div>
-    <Header></Header>
-    <todo></todo>
-    <Footer></Footer>
+    <div id="cover" />
+    <Header />
+    <todo />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Header from './views/layout/header.vue';
-import Todo from './views/todo/todo.vue';
-import Footer from './views/layout/footer.jsx';
+import Header from './views/layout/header.vue'
+import Todo from './views/todo/todo.vue'
+import Footer from './views/layout/footer.jsx'
 
 export default {
   components: {
     Header,
     Footer,
-    Todo,
+    Todo
   },
-  data() {
+  data () {
     return {
-    };
-  },
-};
+    }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
