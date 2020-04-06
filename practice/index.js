@@ -1,1 +1,1 @@
-import './directive'
+import './component/define.js'
