@@ -1,1 +1,1 @@
-import './component/define.js'
+import './component/extend.js'
