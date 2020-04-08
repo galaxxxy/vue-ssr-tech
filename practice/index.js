@@ -1,1 +1,1 @@
-import './component/extend.js'
+import './component/v-model.js'

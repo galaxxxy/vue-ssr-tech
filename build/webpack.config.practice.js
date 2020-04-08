@@ -16,7 +16,7 @@ const devServer = {
 const defaultPlugins = [
   new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: '"production"',
+      NODE_ENV: '"development"',
     },
   }),
   new HTMLPlugin({
