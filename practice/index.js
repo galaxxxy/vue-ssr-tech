@@ -1,1 +1,1 @@
-import './component/feature.js'
+import './component/render.js'
