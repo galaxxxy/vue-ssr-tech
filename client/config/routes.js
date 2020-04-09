@@ -8,7 +8,20 @@ export default [
   },
   {
     path: '/app',
-    component: Todo
+    // props: true,
+    component: Todo,
+    // },
+    name: 'app',
+    meta: {
+      title: 'this is app',
+      description: 'adsfdg'
+    }
+    // children: [
+    //   {
+    //     path: 'test',
+    //     component: Login
+    //   }
+    // ]
   },
   {
     path: '/login',

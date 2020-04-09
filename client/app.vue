@@ -8,7 +8,9 @@
     <router-link to="/login">
       login
     </router-link>
-    <router-view />
+    <transition name="fade">
+      <router-view />
+    </transition>
     <Footer />
   </div>
 </template>
