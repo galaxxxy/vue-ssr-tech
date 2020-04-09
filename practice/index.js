@@ -1,1 +1,1 @@
-import './component/v-model.js'
+import './component/feature.js'
