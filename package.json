@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/galaxxxy/vue-ssr-tech#readme",
   "dependencies": {
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.1.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",

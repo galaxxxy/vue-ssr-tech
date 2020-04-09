@@ -14,6 +14,9 @@ const devServer = {
   overlay: {
     errors: true,
   },
+  historyApiFallback: {
+    index: '/public/index.html'
+  },
   hot: true,
 };
 const defaultPlugins = [
@@ -81,7 +84,7 @@ if (isDev) {
     ]),
     optimization: {
       splitChunks:{
-        chucks: 'all',
+        chunks: 'all',
       },
       runtimeChunk: true,
     },

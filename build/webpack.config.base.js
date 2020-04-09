@@ -10,6 +10,8 @@ const config = {
   output: {
     filename: 'bundle.[hash:8].js',
     path: path.join(__dirname, '../dist'),
+    // apiFallbck的基路径
+    publicPath: '/public/'
   },
   module: {
     rules: [
