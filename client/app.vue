@@ -2,7 +2,7 @@
   <div id="app">
     <div id="cover" />
     <Header />
-    <p>{{ count }}</p>
+    <p>{{ fullName }} {{ counter }}</p>
     <router-link to="/app">
       app
     </router-link>
@@ -20,6 +20,7 @@
 <script>
 import Header from './views/layout/header.vue'
 import Footer from './views/layout/footer.jsx'
+import { mapState, mapGetters } from 'vuex'
 
 export default {
   components: {
@@ -31,9 +32,12 @@ export default {
     }
   },
   computed: {
-    count () {
-      return this.$store.state.count
-    }
+    ...mapState({
+      counter: (state) => state.count
+    }),
+    ...mapGetters({
+      fullName: 'fullName'
+    })
   },
   mounted () {
     console.log(this.$store)
