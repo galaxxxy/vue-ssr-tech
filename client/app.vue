@@ -3,6 +3,7 @@
     <div id="cover" />
     <Header />
     <p>{{ fullName }} {{ counter }}</p>
+    <p>{{ textA }} {{ textPlus }} {{ textC }}</p>
     <router-link to="/app">
       app
     </router-link>
@@ -29,15 +30,21 @@ export default {
   },
   computed: {
     ...mapState({
-      counter: (state) => state.count
+      counter: (state) => state.count,
+      textA: state => state.a.text,
+      textC: state => state.c.text
     }),
     ...mapGetters({
-      fullName: 'fullName'
+      fullName: 'fullName',
+      textPlus: 'a/textPlus'
     })
+    // textA () {
+    //   return this.$store.state.a.text
+    // }
   },
   methods: {
-    ...mapActions(['updateCountAsync']),
-    ...mapMutations(['updateCount'])
+    ...mapActions(['updateCountAsync', 'a/add', 'testAction']),
+    ...mapMutations(['updateCount', 'a/updateText'])
   },
   mounted () {
     console.log(this.$store)
@@ -53,6 +60,9 @@ export default {
       num: 5,
       time: 2000
     })
+    this['a/updateText']('123')
+    this['a/add']()
+    this.testAction()
   }
 }
 </script>

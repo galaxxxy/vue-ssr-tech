@@ -15,6 +15,13 @@ Vue.use(Vuex)
 const router = createRouter()
 const store = createStore()
 
+// Vuex动态加载模块
+store.registerModule('c', {
+  state: {
+    text: 3
+  }
+})
+
 router.beforeEach((to, from, next) => {
   // 登录验证
   console.log('before each invoked')
