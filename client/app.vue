@@ -2,8 +2,8 @@
   <div id="app">
     <div id="cover" />
     <Header />
-    <p>{{ fullName }} {{ counter }}</p>
-    <p>{{ textA }} {{ textPlus }} {{ textC }}</p>
+    <!-- <p>{{ fullName }} {{ counter }}</p>
+    <p>{{ textA }} {{ textPlus }} {{ textC }}</p> -->
     <router-link to="/app">
       app
     </router-link>
@@ -42,10 +42,6 @@ export default {
     //   return this.$store.state.a.text
     // }
   },
-  methods: {
-    ...mapActions(['updateCountAsync', 'a/add', 'testAction']),
-    ...mapMutations(['updateCount', 'a/updateText'])
-  },
   mounted () {
     console.log(this.$store)
     // let i = 1
@@ -63,6 +59,10 @@ export default {
     this['a/updateText']('123')
     this['a/add']()
     this.testAction()
+  },
+  methods: {
+    ...mapActions(['updateCountAsync', 'a/add', 'testAction']),
+    ...mapMutations(['updateCount', 'a/updateText'])
   }
 }
 </script>

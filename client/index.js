@@ -15,11 +15,24 @@ Vue.use(Vuex)
 const router = createRouter()
 const store = createStore()
 
-// Vuex动态加载模块
-store.registerModule('c', {
-  state: {
-    text: 3
-  }
+// Vuex动态绑定模块
+// store.registerModule('c', {
+//   state: {
+//     text: 3
+//   }
+// })
+// 解绑模块
+// store.unregisterModule('c')
+// store.watch(state => state.count + 1, (newCount) => {
+//   console.log('new count watched:', newCount)
+// })
+// store.subscribe((mutation, state) => {
+//   console.log(mutation.type)
+//   console.log(mutation.payload)
+// })
+store.subscribeAction((action, state) => {
+  console.log(action.type)
+  console.log(action.payload)
 })
 
 router.beforeEach((to, from, next) => {
