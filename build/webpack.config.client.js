@@ -4,6 +4,7 @@ const ExtractPlugin = require('extract-text-webpack-plugin');
 const HTMLPlugin = require('html-webpack-plugin');
 const baseConfig = require('./webpack.config.base.js');
 const merge = require('webpack-merge');
+const VueClientPlugin = require('vue-server-renderer/client-plugin')
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -26,6 +27,7 @@ const defaultPlugins = [
     },
   }),
   new HTMLPlugin(),
+  new VueClientPlugin()
 ];
 if (isDev) {
   config = merge(baseConfig, {
