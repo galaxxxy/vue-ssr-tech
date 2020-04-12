@@ -21,7 +21,7 @@ config = merge(baseConfig, {
     rules: [{
       test: /\.styl/,
       use: ExtractPlugin.extract({
-        fallback: 'style-loader',
+        fallback: 'vue-style-loader',
         use: [
           'css-loader',
           {
