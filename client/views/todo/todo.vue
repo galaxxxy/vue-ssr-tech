@@ -67,12 +67,14 @@ export default {
   },
   methods: {
     addTodo (e) {
-      this.todos.unshift({
-        id: id++,
-        content: e.target.value.trim(),
-        completed: false
-      })
-      e.target.value = ''
+      if (e.target.value) {
+        this.todos.unshift({
+          id: id++,
+          content: e.target.value.trim(),
+          completed: false
+        })
+        e.target.value = ''
+      }
     },
     deleteTodo (id) {
       this.todos.splice(this.todos.findIndex(todo => todo.id === id), 1)
