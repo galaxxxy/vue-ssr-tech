@@ -24,6 +24,9 @@ import Footer from './views/layout/footer.jsx'
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'
 
 export default {
+  metaInfo: {
+    title: 'Jokcy\'s Todo App'
+  },
   components: {
     Header,
     Footer

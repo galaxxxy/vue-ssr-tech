@@ -27,25 +27,28 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
-  // beforeRouteEnter (to, from, next) {
-  //   console.log('todo before enter')
-  //   // 此时组件没有被实例化(无this)
-  //   next(vm => {
-  //     console.log('after enter this.filter is ' + vm.filter)
-  //   })
-  // },
-  // beforeRouteUpdate (to, from, next) {
-  //   // 路由参数改变时触发
-  //   console.log('todo before update')
-  //   next()
-  // },
-  // beforeRouteLeave (to, from, next) {
-  //   // 缓存页面暂时性数据/确认跳转框
-  //   console.log('todo before leave')
-  //   if (global.confirm('are u sure?')) {
-  //     next()
-  //   }
-  // },
+  metaInfo: {
+    title: 'The Todo App'
+  },
+  beforeRouteEnter (to, from, next) {
+    console.log('todo before enter')
+    // 此时组件没有被实例化(无this)
+    next(vm => {
+      console.log('after enter this.filter is ' + vm.filter)
+    })
+  },
+  beforeRouteUpdate (to, from, next) {
+    // 路由参数改变时触发
+    console.log('todo before update')
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    // 缓存页面暂时性数据/确认跳转框
+    console.log('todo before leave')
+    if (global.confirm('are u sure?')) {
+      next()
+    }
+  },
   components: {
     Item,
     Tabs
